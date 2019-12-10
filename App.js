@@ -1,25 +1,27 @@
-import React, {useEffect} from 'react';
 import reducer from './reducers';
 import { createStore } from 'redux';
+import React, {useEffect} from 'react';
 import { Provider } from 'react-redux';
 import Statusbar from './components/Statusbar';
 import { StyleSheet, Text, View } from 'react-native';
 import { setLocalNotification } from './helpers/notifications';
+import AppNavigator from "./navigation/AppNavigator";
 
-export default function App() {
-
-    useEffect(() => {
+export default class App extends React.Component {
+    componentDidMount() {
         setLocalNotification()
-    });
-
-    return (
-        <Provider store={createStore(reducer)}>
-            <View style={styles.container}>
-                <Statusbar/>
-                <Text>Flash Cards</Text>
-            </View>
-        </Provider>
-    );
+    }
+    render() {
+        return (
+            <Provider store={createStore(reducer)}>
+                <View style={styles.container}>
+                    <Statusbar/>
+                    <Text>App Works Fine</Text>
+                    <AppNavigator/>
+                </View>
+            </Provider>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
