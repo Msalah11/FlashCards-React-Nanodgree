@@ -53,6 +53,19 @@ export const styles = StyleSheet.create({
         borderColor: colors.GRAY,
         marginBottom: 15,
         padding: 15,
+    },
+    textLable: {
+        backgroundColor: colors.RED,
+        color: colors.WHITE,
+        marginVertical: 15,
+        borderRadius: 5,
+        padding: 5,
+        alignSelf: 'flex-start'
+    },
+    resultText: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        marginVertical: 20
     }
 });
 

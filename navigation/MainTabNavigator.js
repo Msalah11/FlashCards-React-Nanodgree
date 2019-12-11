@@ -6,6 +6,7 @@ import {createStackNavigator} from "react-navigation-stack";
 import {createBottomTabNavigator} from "react-navigation-tabs";
 import Deck from "../components/Deck";
 import AddCard from "../components/AddCard";
+import Quiz from "../components/Quiz";
 
 const config = Platform.select({
     web: { headerMode: 'screen' },
@@ -16,6 +17,7 @@ const DeckListStack = createStackNavigator({
     DeckList: DeckList,
     Deck: Deck,
     AddCard: AddCard,
+    Quiz: Quiz,
 }, config);
 DeckListStack.navigationOptions = {
     tabBarLabel: 'Home',
