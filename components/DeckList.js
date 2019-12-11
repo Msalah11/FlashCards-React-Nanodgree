@@ -2,7 +2,7 @@ import DeckItem from './DeckItem';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import { receiveDecks } from '../actions';
-import { styles } from '../helpers/styles';
+import { styles, headerStyles } from '../helpers/styles';
 import { getDecks } from '../helpers/storage';
 import { FlatList, Text, View, ScrollView } from 'react-native';
 
@@ -10,6 +10,13 @@ class DeckList extends Component {
     componentDidMount() {
         const {dispatch} = this.props;
         getDecks().then((decks) => dispatch(receiveDecks(decks)));
+    };
+
+    static navigationOptions = ({navigation}) => {
+        return {
+            title: 'Deck List',
+            ...headerStyles
+        }
     };
 
     deckPressed = (title) => {
@@ -36,8 +43,9 @@ class DeckList extends Component {
 
         return (
             <View style={styles.container}>
-                <ScrollView>
-                    <Text style={styles.title}>Deck list</Text>
+                <ScrollView
+                    style={styles.container}
+                    contentContainerStyle={styles.contentContainer}>
                     <FlatList data={deckList}
                               renderItem={this.renderItem}/>
                 </ScrollView>

@@ -16,7 +16,6 @@ export default class App extends React.Component {
             <Provider store={createStore(reducer)}>
                 <View style={styles.container}>
                     <Statusbar/>
-                    <Text>App Works Fine</Text>
                     <AppNavigator/>
                 </View>
             </Provider>
@@ -27,8 +26,5 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
 });

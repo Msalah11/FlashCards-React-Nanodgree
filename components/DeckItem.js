@@ -1,30 +1,16 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from '../helpers/styles';
 
 export default class DeckItem extends Component {
     render() {
         const {item} = this.props;
 
         return (
-            <View>
-                <Text style={style.deckTitle}>{item.title}</Text>
-                <Text>{item.questions.length} cards</Text>
+            <View style={styles.asphaltCard}>
+                <Text style={styles.asphaltCardTitle}>{item.title}</Text>
+                <Text style={styles.asphaltCardBody}>{item.questions.length} cards</Text>
             </View>
         );
     }
 }
-
-const style = StyleSheet.create({
-    deck: {
-        borderTopColor: '#cccccc',
-        borderTopWidth: 1,
-        paddingBottom: 18,
-        paddingLeft: 12,
-        paddingRight: 12,
-        paddingTop: 18
-    },
-    deckTitle: {
-        fontSize: 20,
-        paddingBottom: 3
-    }
-});

@@ -11,16 +11,15 @@ const config = Platform.select({
 });
 
 const DeckListStack = createStackNavigator({DeckList: DeckList}, config);
-DeckListStack.navigationOptions = {tabBarLabel: 'Home'};
+DeckListStack.navigationOptions = {
+    tabBarLabel: 'Home',
+    tabBarIcon: <Ionicons size={25} name="ios-home"/>,
+};
 DeckListStack.path = '';
 
-const DeckStack = createStackNavigator({Deck: DeckList}, config);
-DeckStack.navigationOptions = {tabBarLabel: 'Deck'};
-DeckStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
     DeckListStack,
-    DeckStack
 });
 
 tabNavigator.path = '';

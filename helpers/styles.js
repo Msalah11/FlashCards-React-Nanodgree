@@ -2,42 +2,37 @@ import { colors } from './colors';
 import { StyleSheet, Platform } from 'react-native';
 
 export const styles = StyleSheet.create({
-    title: {
-        backgroundColor: colors.BLUE,
-        color: colors.WHITE,
-        fontSize: 24,
-        textAlign: 'center',
-        padding: 12
-    },
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: '#fff',
     },
-    formLabel: {
-        fontSize: 16,
-        paddingBottom: 6,
-        paddingLeft: 12,
-        paddingRight: 12,
-        paddingTop: 12
+    contentContainer: {
+        padding: 30,
     },
-    formInput: {
-        borderColor: colors.GRAY,
-        borderWidth:  Platform.OS === 'ios' ? 1 : 0,
-        paddingBottom: 12,
-        paddingLeft: 6,
-        paddingTop: 12,
-        marginLeft: 12,
-        marginRight: 12
+    asphaltCard: {
+        backgroundColor: colors.ASPHALT,
+        textAlign: 'center',
+        marginBottom: 20,
+        padding: 15,
+        borderRadius: 5,
     },
-    button: {
-        backgroundColor: colors.BLUE,
-        borderRadius: 2,
-        margin: 12,
-        paddingBottom: 12,
-        paddingTop: 12
-    },
-    buttonText: {
+    asphaltCardTitle: {
         color: colors.WHITE,
         fontSize: 20,
-        textAlign: 'center'
+        fontWeight: 'bold',
+        marginBottom: 15,
+    },
+    asphaltCardBody: {
+        color: colors.WHITE,
     }
 });
+
+export const headerStyles = {
+    headerStyle: {
+        backgroundColor: colors.BLUE,
+    },
+    headerTintColor: colors.WHITE,
+    headerTitleStyle: {
+        fontWeight: 'bold',
+    },
+}
