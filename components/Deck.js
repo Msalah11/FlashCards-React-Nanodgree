@@ -28,20 +28,6 @@ class Deck extends React.Component {
         this.setState({deck: deck[1]});
     }
 
-    componentWillReceiveProps(props) {
-        if (props.decks) {
-            const {navigation} = this.props;
-
-            const deck = Object.entries(props.decks).find(
-                deck => {
-                    return deck[1].title === navigation.state.params.deckId;
-                }
-            );
-
-            this.setState({deck: deck[1]});
-        }
-    }
-
     render() {
         return (
             <View style={styles.container}>
