@@ -7,6 +7,7 @@ import {createBottomTabNavigator} from "react-navigation-tabs";
 import Deck from "../components/Deck";
 import AddCard from "../components/AddCard";
 import Quiz from "../components/Quiz";
+import AddDeck from "../components/AddDeck";
 
 const config = Platform.select({
     web: { headerMode: 'screen' },
@@ -25,9 +26,20 @@ DeckListStack.navigationOptions = {
 };
 DeckListStack.path = '';
 
+const AddDeckStack = createStackNavigator({
+    AddDeck: AddDeck,
+}, config);
+
+AddDeckStack.navigationOptions = {
+    tabBarLabel: 'Add Deck',
+    tabBarIcon: <Ionicons size={25} name="ios-add"/>,
+};
+AddDeckStack.path = '';
+
 
 const tabNavigator = createBottomTabNavigator({
     DeckListStack,
+    AddDeckStack
 });
 
 tabNavigator.path = '';
