@@ -24,6 +24,23 @@ export const styles = StyleSheet.create({
     },
     asphaltCardBody: {
         color: colors.WHITE,
+    },
+    button: {
+        padding: 15,
+        marginBottom: 20,
+        borderRadius: 5,
+        alignContent: 'center',
+        alignItems: 'center'
+    },
+    successButton: {
+        backgroundColor: colors.GREEN,
+    },
+    dangerButton: {
+        backgroundColor: colors.RED
+    },
+    buttonText: {
+        color: colors.WHITE,
+        fontSize: 15
     }
 });
 
