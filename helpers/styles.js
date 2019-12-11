@@ -38,9 +38,21 @@ export const styles = StyleSheet.create({
     dangerButton: {
         backgroundColor: colors.RED
     },
+    infoButton: {
+        backgroundColor: colors.BLUE
+    },
     buttonText: {
         color: colors.WHITE,
         fontSize: 15
+    },
+    formInput: {
+        backgroundColor: colors.WHITE,
+        borderRadius: 5,
+        borderStyle: 'solid',
+        borderWidth: 2,
+        borderColor: colors.GRAY,
+        marginBottom: 15,
+        padding: 15,
     }
 });
 
