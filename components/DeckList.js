@@ -20,6 +20,7 @@ class DeckList extends Component {
     };
 
     deckPressed = (title) => {
+        console.log(title)
         this.props.navigation.navigate('Deck', {
             deckId: title
         });
