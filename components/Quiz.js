@@ -104,7 +104,7 @@ class Quiz extends React.Component {
                             </TouchableOpacity>
 
                             <TouchableOpacity
-                                style={styles.button}
+                                style={[styles.button, styles.dangerButton]}
                                 onPress={this.resetQuiz}>
                                 <Text style={styles.buttonText}>Restart Quiz</Text>
                             </TouchableOpacity>
